@@ -1,0 +1,50 @@
+{
+  "code": "R_000015",
+  "name": {
+    "de": "Paprikapulver",
+    "en": "Paprika, ground"
+  },
+  "per100g": {
+    "fat": "12.89",
+    "saturates": "2.14",
+    "monounsaturates": "1.695",
+    "polyunsaturates": "7.766",
+    "carbohydrate": "19.09",
+    "sugars": "10.34",
+    "starch": null,
+    "polyols": null,
+    "fibre": "34.9",
+    "protein": "14.14",
+    "sodium": "0.068",
+    "alcohol": "0",
+    "organicAcids": null
+  },
+  "marks": {},
+  "sources": [
+    {
+      "source": "usda-sr-legacy",
+      "id": "171329",
+      "nutrients": [
+        "fat",
+        "saturates",
+        "monounsaturates",
+        "polyunsaturates",
+        "carbohydrate",
+        "sugars",
+        "starch",
+        "polyols",
+        "fibre",
+        "protein",
+        "sodium",
+        "alcohol",
+        "organicAcids"
+      ],
+      "derived": {
+        "carbohydrate": {
+          "byDifference": "53.99",
+          "fibre": "34.9"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "code": "R_000027",
+  "name": {
+    "de": "Bohnenkraut gemahlen",
+    "en": "Savory, ground"
+  },
+  "per100g": {
+    "fat": "5.91",
+    "saturates": "3.26",
+    "monounsaturates": null,
+    "polyunsaturates": null,
+    "carbohydrate": "23.03",
+    "sugars": null,
+    "starch": null,
+    "polyols": null,
+    "fibre": "45.7",
+    "protein": "6.73",
+    "sodium": "0.024",
+    "alcohol": null,
+    "organicAcids": null
+  },
+  "marks": {},
+  "sources": [
+    {
+      "source": "usda-sr-legacy",
+      "id": "170936",
+      "nutrients": [
+        "fat",
+        "saturates",
+        "monounsaturates",
+        "polyunsaturates",
+        "carbohydrate",
+        "sugars",
+        "starch",
+        "polyols",
+        "fibre",
+        "protein",
+        "sodium",
+        "alcohol",
+        "organicAcids"
+      ],
+      "derived": {
+        "carbohydrate": {
+          "byDifference": "68.73",
+          "fibre": "45.7"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "code": "R_000026",
+  "name": {
+    "de": "Estragon getrocknet",
+    "en": "Tarragon, dried"
+  },
+  "per100g": {
+    "fat": "7.24",
+    "saturates": "1.881",
+    "monounsaturates": "0.474",
+    "polyunsaturates": "3.698",
+    "carbohydrate": "42.82",
+    "sugars": null,
+    "starch": null,
+    "polyols": null,
+    "fibre": "7.4",
+    "protein": "22.77",
+    "sodium": "0.062",
+    "alcohol": "0",
+    "organicAcids": null
+  },
+  "marks": {},
+  "sources": [
+    {
+      "source": "usda-sr-legacy",
+      "id": "170937",
+      "nutrients": [
+        "fat",
+        "saturates",
+        "monounsaturates",
+        "polyunsaturates",
+        "carbohydrate",
+        "sugars",
+        "starch",
+        "polyols",
+        "fibre",
+        "protein",
+        "sodium",
+        "alcohol",
+        "organicAcids"
+      ],
+      "derived": {
+        "carbohydrate": {
+          "byDifference": "50.22",
+          "fibre": "7.4"
+        }
+      }
+    }
+  ]
+}

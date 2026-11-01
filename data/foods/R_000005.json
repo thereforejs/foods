@@ -1,0 +1,44 @@
+{
+  "code": "R_000005",
+  "name": {
+    "de": "Kreuzkümmel getrocknet",
+    "en": "Cumin seed, dried"
+  },
+  "per100g": {
+    "fat": "16.6",
+    "saturates": "0.6",
+    "monounsaturates": "8.4",
+    "polyunsaturates": "4.3",
+    "carbohydrate": "22.6",
+    "sugars": "1.4",
+    "starch": null,
+    "polyols": null,
+    "fibre": "30.4",
+    "protein": "13.9",
+    "sodium": "0.125",
+    "alcohol": "0",
+    "organicAcids": null
+  },
+  "marks": {},
+  "sources": [
+    {
+      "source": "livsmedelsverket-2026",
+      "id": "7199",
+      "nutrients": [
+        "fat",
+        "saturates",
+        "monounsaturates",
+        "polyunsaturates",
+        "carbohydrate",
+        "sugars",
+        "starch",
+        "polyols",
+        "fibre",
+        "protein",
+        "sodium",
+        "alcohol",
+        "organicAcids"
+      ]
+    }
+  ]
+}

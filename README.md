@@ -115,6 +115,27 @@ import { sources } from "@thereforejs/foods/sources";
 sources["bls-4.0"].citation;
 ```
 
+## Beyond the BLS
+
+Everyday cooking needs foods the BLS 4.0 does not hold, dried spices and herbs above all. They come
+from other open sources under ids of their own: the main food group, an underscore and six digits
+(`R_000009` Oregano getrocknet). An id with an underscore is never a BLS code.
+
+Some sources give carbohydrate by difference, fibre included, where the declaration wants the
+available carbohydrate without it (USDA). There the value is that difference less the fibre of the
+same entry, and the entry keeps both numbers under `derived`, so anyone can check the subtraction:
+
+```json
+{
+  "source": "usda-sr-legacy",
+  "id": "171328",
+  "derived": { "carbohydrate": { "byDifference": "68.92", "fibre": "42.5" } }
+}
+```
+
+A food whose source contradicts itself does not ship, as with the BLS (curry powder: more sugars
+than the difference leaves).
+
 ## Left out
 
 A food whose fatty acids add up to more than its fat does not ship: a nutrition declaration cannot
@@ -149,6 +170,8 @@ Step by step in [CONTRIBUTING.md](./CONTRIBUTING.md).
     [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
   - USDA FoodData Central (SR Legacy, Survey Foods/FNDDS), U.S. Department of Agriculture,
     Agricultural Research Service, [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+  - Livsmedelsverket (2026): Livsmedelsdatabasen, version 2026-07, Swedish Food Agency,
+    [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 ### Changes to the BLS 4.0
 

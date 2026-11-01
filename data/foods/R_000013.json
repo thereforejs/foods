@@ -1,0 +1,50 @@
+{
+  "code": "R_000013",
+  "name": {
+    "de": "Salbei gemahlen",
+    "en": "Sage, ground"
+  },
+  "per100g": {
+    "fat": "12.75",
+    "saturates": "7.03",
+    "monounsaturates": "1.87",
+    "polyunsaturates": "1.76",
+    "carbohydrate": "20.43",
+    "sugars": "1.71",
+    "starch": null,
+    "polyols": null,
+    "fibre": "40.3",
+    "protein": "10.63",
+    "sodium": "0.011",
+    "alcohol": "0",
+    "organicAcids": null
+  },
+  "marks": {},
+  "sources": [
+    {
+      "source": "usda-sr-legacy",
+      "id": "170935",
+      "nutrients": [
+        "fat",
+        "saturates",
+        "monounsaturates",
+        "polyunsaturates",
+        "carbohydrate",
+        "sugars",
+        "starch",
+        "polyols",
+        "fibre",
+        "protein",
+        "sodium",
+        "alcohol",
+        "organicAcids"
+      ],
+      "derived": {
+        "carbohydrate": {
+          "byDifference": "60.73",
+          "fibre": "40.3"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "code": "R_000012",
+  "name": {
+    "de": "Rosmarin getrocknet",
+    "en": "Rosemary, dried"
+  },
+  "per100g": {
+    "fat": "15.22",
+    "saturates": "7.371",
+    "monounsaturates": "3.014",
+    "polyunsaturates": "2.339",
+    "carbohydrate": "21.46",
+    "sugars": null,
+    "starch": null,
+    "polyols": null,
+    "fibre": "42.6",
+    "protein": "4.88",
+    "sodium": "0.05",
+    "alcohol": "0",
+    "organicAcids": null
+  },
+  "marks": {},
+  "sources": [
+    {
+      "source": "usda-sr-legacy",
+      "id": "171333",
+      "nutrients": [
+        "fat",
+        "saturates",
+        "monounsaturates",
+        "polyunsaturates",
+        "carbohydrate",
+        "sugars",
+        "starch",
+        "polyols",
+        "fibre",
+        "protein",
+        "sodium",
+        "alcohol",
+        "organicAcids"
+      ],
+      "derived": {
+        "carbohydrate": {
+          "byDifference": "64.06",
+          "fibre": "42.6"
+        }
+      }
+    }
+  ]
+}

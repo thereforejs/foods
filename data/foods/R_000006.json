@@ -1,0 +1,44 @@
+{
+  "code": "R_000006",
+  "name": {
+    "de": "Koriandersamen getrocknet",
+    "en": "Coriander seed, dried"
+  },
+  "per100g": {
+    "fat": "17.5",
+    "saturates": "1",
+    "monounsaturates": "10.8",
+    "polyunsaturates": "2.2",
+    "carbohydrate": "13",
+    "sugars": "2.4",
+    "starch": null,
+    "polyols": null,
+    "fibre": "44.8",
+    "protein": "10.7",
+    "sodium": "0.034",
+    "alcohol": "0",
+    "organicAcids": null
+  },
+  "marks": {},
+  "sources": [
+    {
+      "source": "livsmedelsverket-2026",
+      "id": "7197",
+      "nutrients": [
+        "fat",
+        "saturates",
+        "monounsaturates",
+        "polyunsaturates",
+        "carbohydrate",
+        "sugars",
+        "starch",
+        "polyols",
+        "fibre",
+        "protein",
+        "sodium",
+        "alcohol",
+        "organicAcids"
+      ]
+    }
+  ]
+}

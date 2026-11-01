@@ -98,6 +98,33 @@ A food that has no BLS code gets our own id: its main food group, an underscore 
 picks the next number of the group; an id never changes and is never reused, because applications
 import foods by it. Both kinds are valid identifiers and export names (`scripts/ids.ts`).
 
+### 3.3 Foods beyond the BLS
+
+Decided 2026-11-01: basic cooking foods the BLS 4.0 does not hold (dried spices and herbs, fish
+sauce, baking soda, agave syrup) are added from other registered open sources, under our own ids
+(section 3.2), never with a BLS code and never with a `bls-4.0` entry. A source wins when it gives the
+declaration's nutrients directly: Livsmedelsverket (Swedish Food Agency, CC BY 4.0) before USDA.
+
+**One derivation is allowed, and only this one.** USDA gives carbohydrate by difference, fibre
+included (`Carbohydrate, by difference`); the declaration wants available carbohydrate. The value is
+that difference less `Fiber, total dietary` of the same entry, computed exactly in decimals, and the
+entry keeps both numbers:
+
+```json
+"derived": { "carbohydrate": { "byDifference": "49.29", "fibre": "20.8" } }
+```
+
+The check recomputes it on every build and refuses a value that is no such difference, a fibre other
+than the food's, an entry that does not give both, and a difference below its fibre. Nutmeg checks the
+rule against a source that gives available carbohydrate directly: USDA 49.29 less 20.8 is 28.49,
+Livsmedelsverket gives 28.6.
+
+Left out, with the reason: agar (USDA gives 7.7 fibre in 80.88, which would make a fibre almost
+wholly available carbohydrate), curry powder (USDA sugars 2.76 above its 2.63 difference). Not added
+because the BLS has them: Tahin (Q901000), onion powder (G480500), brown rice (C351000), balsamic
+vinegar (R125000). Still without any open source: liquid seasoning (the Maggi kind), star anise,
+vanilla pod, juniper, harissa, curry paste, beet syrup, rice syrup, coconut sugar, erythritol.
+
 ---
 
 ## 4. Preparation
@@ -236,7 +263,7 @@ whose recipe calculation gives fat 0 but fatty acids above it).
 3. Group split: every food lands in the group of its first letter, no group file holds a food of
    another group, codes like `M5B1600` included.
 4. The shipped data: the 7,140 foods without the 32 left out, each exported under its own code, every value its shortest
-   decimal.
+   decimal; foods of our own (section 3.3) carry no `bls-4.0` entry.
 5. Every shipped food passes nutrition's input rules or is listed in the build report.
 6. Reproducibility: two builds give byte-identical files.
 7. Property (fast-check): for every value, the shipped string reads back to the same double as the
@@ -316,5 +343,8 @@ whose recipe calculation gives fat 0 but fatty acids above it).
 ## 13. Sources
 
 - Max Rubner-Institut: BLS 4.0, https://www.blsdb.de/download, and its documentation (Dezember 2025).
+- Livsmedelsverket: Livsmedelsdatabasen, https://dataportal.livsmedelsverket.se (API, retrieved
+  2026-11-01), CC BY 4.0 as stated on https://www.livsmedelsverket.se/om-oss/psidata/livsmedelsdatabasen.
+- USDA FoodData Central: SR Legacy (2018) and Survey Foods (FNDDS) 2024, CC0 1.0.
 - Regulation (EU) No 1169/2011, Annex I, Annex XIV.
 - `@thereforejs/nutrition`, `SPEC.md` sections 3.2, 7 and 8.

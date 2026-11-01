@@ -1,0 +1,50 @@
+{
+  "code": "R_000009",
+  "name": {
+    "de": "Oregano getrocknet",
+    "en": "Oregano, dried"
+  },
+  "per100g": {
+    "fat": "4.28",
+    "saturates": "1.551",
+    "monounsaturates": "0.716",
+    "polyunsaturates": "1.369",
+    "carbohydrate": "26.42",
+    "sugars": "4.09",
+    "starch": null,
+    "polyols": null,
+    "fibre": "42.5",
+    "protein": "9",
+    "sodium": "0.025",
+    "alcohol": "0",
+    "organicAcids": null
+  },
+  "marks": {},
+  "sources": [
+    {
+      "source": "usda-sr-legacy",
+      "id": "171328",
+      "nutrients": [
+        "fat",
+        "saturates",
+        "monounsaturates",
+        "polyunsaturates",
+        "carbohydrate",
+        "sugars",
+        "starch",
+        "polyols",
+        "fibre",
+        "protein",
+        "sodium",
+        "alcohol",
+        "organicAcids"
+      ],
+      "derived": {
+        "carbohydrate": {
+          "byDifference": "68.92",
+          "fibre": "42.5"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "code": "R_000014",
+  "name": {
+    "de": "Lorbeerblatt getrocknet",
+    "en": "Bay leaf, dried"
+  },
+  "per100g": {
+    "fat": "8.36",
+    "saturates": "2.28",
+    "monounsaturates": "1.64",
+    "polyunsaturates": "2.29",
+    "carbohydrate": "48.67",
+    "sugars": null,
+    "starch": null,
+    "polyols": null,
+    "fibre": "26.3",
+    "protein": "7.61",
+    "sodium": "0.023",
+    "alcohol": "0",
+    "organicAcids": null
+  },
+  "marks": {},
+  "sources": [
+    {
+      "source": "usda-sr-legacy",
+      "id": "170917",
+      "nutrients": [
+        "fat",
+        "saturates",
+        "monounsaturates",
+        "polyunsaturates",
+        "carbohydrate",
+        "sugars",
+        "starch",
+        "polyols",
+        "fibre",
+        "protein",
+        "sodium",
+        "alcohol",
+        "organicAcids"
+      ],
+      "derived": {
+        "carbohydrate": {
+          "byDifference": "74.97",
+          "fibre": "26.3"
+        }
+      }
+    }
+  ]
+}

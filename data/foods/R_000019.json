@@ -1,0 +1,50 @@
+{
+  "code": "R_000019",
+  "name": {
+    "de": "Senfsaat gemahlen",
+    "en": "Mustard seed, ground"
+  },
+  "per100g": {
+    "fat": "36.24",
+    "saturates": "1.989",
+    "monounsaturates": "22.518",
+    "polyunsaturates": "10.088",
+    "carbohydrate": "15.89",
+    "sugars": "6.79",
+    "starch": null,
+    "polyols": null,
+    "fibre": "12.2",
+    "protein": "26.08",
+    "sodium": "0.013",
+    "alcohol": "0",
+    "organicAcids": null
+  },
+  "marks": {},
+  "sources": [
+    {
+      "source": "usda-sr-legacy",
+      "id": "170929",
+      "nutrients": [
+        "fat",
+        "saturates",
+        "monounsaturates",
+        "polyunsaturates",
+        "carbohydrate",
+        "sugars",
+        "starch",
+        "polyols",
+        "fibre",
+        "protein",
+        "sodium",
+        "alcohol",
+        "organicAcids"
+      ],
+      "derived": {
+        "carbohydrate": {
+          "byDifference": "28.09",
+          "fibre": "12.2"
+        }
+      }
+    }
+  ]
+}

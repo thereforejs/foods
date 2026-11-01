@@ -1,0 +1,50 @@
+{
+  "code": "R_000029",
+  "name": {
+    "de": "Minze getrocknet",
+    "en": "Spearmint, dried"
+  },
+  "per100g": {
+    "fat": "6.03",
+    "saturates": "1.577",
+    "monounsaturates": "0.21",
+    "polyunsaturates": "3.257",
+    "carbohydrate": "22.24",
+    "sugars": null,
+    "starch": null,
+    "polyols": null,
+    "fibre": "29.8",
+    "protein": "19.93",
+    "sodium": "0.344",
+    "alcohol": null,
+    "organicAcids": null
+  },
+  "marks": {},
+  "sources": [
+    {
+      "source": "usda-sr-legacy",
+      "id": "172239",
+      "nutrients": [
+        "fat",
+        "saturates",
+        "monounsaturates",
+        "polyunsaturates",
+        "carbohydrate",
+        "sugars",
+        "starch",
+        "polyols",
+        "fibre",
+        "protein",
+        "sodium",
+        "alcohol",
+        "organicAcids"
+      ],
+      "derived": {
+        "carbohydrate": {
+          "byDifference": "52.04",
+          "fibre": "29.8"
+        }
+      }
+    }
+  ]
+}

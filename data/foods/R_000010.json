@@ -1,0 +1,50 @@
+{
+  "code": "R_000010",
+  "name": {
+    "de": "Majoran getrocknet",
+    "en": "Marjoram, dried"
+  },
+  "per100g": {
+    "fat": "7.04",
+    "saturates": "0.529",
+    "monounsaturates": "0.94",
+    "polyunsaturates": "4.405",
+    "carbohydrate": "20.26",
+    "sugars": "4.09",
+    "starch": null,
+    "polyols": null,
+    "fibre": "40.3",
+    "protein": "12.66",
+    "sodium": "0.077",
+    "alcohol": "0",
+    "organicAcids": null
+  },
+  "marks": {},
+  "sources": [
+    {
+      "source": "usda-sr-legacy",
+      "id": "170928",
+      "nutrients": [
+        "fat",
+        "saturates",
+        "monounsaturates",
+        "polyunsaturates",
+        "carbohydrate",
+        "sugars",
+        "starch",
+        "polyols",
+        "fibre",
+        "protein",
+        "sodium",
+        "alcohol",
+        "organicAcids"
+      ],
+      "derived": {
+        "carbohydrate": {
+          "byDifference": "60.56",
+          "fibre": "40.3"
+        }
+      }
+    }
+  ]
+}

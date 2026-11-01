@@ -228,3 +228,77 @@ describe("review against the list of open contradictions", () => {
     expect(summary).toEqual({ foods: 2, marks: 1, open: 0 });
   });
 });
+
+describe("carbohydrate derived from a source that gives it by difference", () => {
+  // USDA gives carbohydrate by difference, fibre included; the label wants it without.
+  const nutmeg = (): Food => ({
+    code: "R_000001",
+    name: { de: "Muskatnuss gemahlen", en: "Nutmeg, ground" },
+    per100g: {
+      fat: "36.31",
+      saturates: "25.94",
+      monounsaturates: "3.22",
+      polyunsaturates: "0.35",
+      carbohydrate: "28.49",
+      sugars: "2.99",
+      starch: null,
+      polyols: null,
+      fibre: "20.8",
+      protein: "5.84",
+      sodium: "0.016",
+      alcohol: "0",
+      organicAcids: null,
+    },
+    marks: {},
+    sources: [
+      {
+        source: "usda-sr-legacy",
+        id: "170931",
+        nutrients: ALL,
+        derived: { carbohydrate: { byDifference: "49.29", fibre: "20.8" } },
+      },
+    ],
+  });
+  const derivedIssues = (change: (food: Food) => void) => {
+    const food = nutmeg();
+    change(food);
+    return checkFood(food).map(({ message }) => message);
+  };
+
+  test("is sound when it is the difference less the fibre, exactly", () => {
+    expect(checkFood(nutmeg())).toEqual([]);
+  });
+
+  test.each<[string, (food: Food) => void]>([
+    ["a carbohydrate that is no such difference", (f) => (f.per100g.carbohydrate = "28.5")],
+    ["a fibre other than the one it was taken from", (f) => (f.per100g.fibre = "20.9")],
+    [
+      "a derivation of an entry that does not hold carbohydrate",
+      (f) => {
+        f.sources = [
+          {
+            source: "usda-sr-legacy",
+            id: "170931",
+            nutrients: ALL.filter((k) => k !== "carbohydrate"),
+          },
+          {
+            source: "usda-fndds-2024",
+            id: "1",
+            nutrients: ["carbohydrate"],
+            derived: { carbohydrate: { byDifference: "49.29", fibre: "20.8" } },
+          },
+        ];
+      },
+    ],
+    [
+      "a difference below its fibre",
+      (f) => {
+        f.sources[0]!.derived = { carbohydrate: { byDifference: "20", fibre: "20.8" } };
+      },
+    ],
+  ])("refuses %s", (_, change) => {
+    expect(
+      derivedIssues(change).some((message) => message.startsWith("derived carbohydrate")),
+    ).toBe(true);
+  });
+});

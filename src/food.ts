@@ -17,8 +17,20 @@ export type Nutrient =
 /** Below the limit of detection or quantification, or traces (BLS 4.0 documentation, 4.4). */
 export type Mark = "<LOD" | "<LOQ" | "<LOD or <LOQ" | "TR";
 
+/**
+ * A carbohydrate the source gives by difference, fibre included, as the label wants it: that
+ * difference less the fibre of the same entry. Both are kept, so the value can be checked.
+ */
+export type DerivedCarbohydrate = { byDifference: string; fibre: string };
+
 /** Where a group of values comes from: a source of `sources` and its own id for the food. */
-export type FoodSource = { source: string; id: string; nutrients: Nutrient[] };
+export type FoodSource = {
+  source: string;
+  id: string;
+  nutrients: Nutrient[];
+  /** Values the entry gives only as parts of a calculation (SPEC 3.3). */
+  derived?: { carbohydrate: DerivedCarbohydrate };
+};
 
 /** One food, values per 100 g edible part. */
 export type Food = {

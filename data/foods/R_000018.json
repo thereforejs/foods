@@ -1,0 +1,50 @@
+{
+  "code": "R_000018",
+  "name": {
+    "de": "Anis getrocknet",
+    "en": "Anise seed, dried"
+  },
+  "per100g": {
+    "fat": "15.9",
+    "saturates": "0.586",
+    "monounsaturates": "9.78",
+    "polyunsaturates": "3.15",
+    "carbohydrate": "35.42",
+    "sugars": null,
+    "starch": null,
+    "polyols": null,
+    "fibre": "14.6",
+    "protein": "17.6",
+    "sodium": "0.016",
+    "alcohol": "0",
+    "organicAcids": null
+  },
+  "marks": {},
+  "sources": [
+    {
+      "source": "usda-sr-legacy",
+      "id": "171316",
+      "nutrients": [
+        "fat",
+        "saturates",
+        "monounsaturates",
+        "polyunsaturates",
+        "carbohydrate",
+        "sugars",
+        "starch",
+        "polyols",
+        "fibre",
+        "protein",
+        "sodium",
+        "alcohol",
+        "organicAcids"
+      ],
+      "derived": {
+        "carbohydrate": {
+          "byDifference": "50.02",
+          "fibre": "14.6"
+        }
+      }
+    }
+  ]
+}

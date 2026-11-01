@@ -1,5 +1,5 @@
-import { compare, decimal } from "@thereforejs/decy";
-import type { Food, Nutrient } from "../src/food.ts";
+import { compare, decimal, subtract, toDecimalString } from "@thereforejs/decy";
+import type { Food, FoodSource, Nutrient } from "../src/food.ts";
 import { sources } from "../src/sources.ts";
 import { shortestDecimal } from "./decimal.ts";
 import { isFoodId } from "./ids.ts";
@@ -84,7 +84,8 @@ function isShortestPlain(value: string): boolean {
   }
 }
 
-function checkSources({ sources: entries }: Food): Issue[] {
+function checkSources(food: Food): Issue[] {
+  const { sources: entries } = food;
   const issues: Issue[] = [];
   const covered = new Map<string, number>();
   for (const { source, id, nutrients } of entries) {
@@ -98,6 +99,9 @@ function checkSources({ sources: entries }: Food): Issue[] {
     const count = covered.get(key) ?? 0;
     if (count !== 1) issues.push({ code: "source", message: `${key} comes from ${count} sources` });
   }
+  for (const entry of entries) {
+    if (entry.derived) issues.push(...checkDerived(entry, food));
+  }
   // A whole and its parts from different sources can contradict each other (the BLS Klippfisch).
   const entryOf = (key: Nutrient) => entries.findIndex(({ nutrients }) => nutrients.includes(key));
   for (const [part, whole] of PARTS) {
@@ -106,6 +110,30 @@ function checkSources({ sources: entries }: Food): Issue[] {
     }
   }
   return issues;
+}
+
+// The derived value must be exactly the difference less the fibre, both of the entry that gives it.
+function checkDerived({ nutrients, derived }: FoodSource, { per100g }: Food): Issue[] {
+  const wrong = (message: string): Issue[] => [
+    { code: "source", message: `derived carbohydrate ${message}` },
+  ];
+  const parts = derived?.carbohydrate;
+  if (!parts) return wrong("needs byDifference and fibre");
+  if (!nutrients.includes("carbohydrate") || !nutrients.includes("fibre")) {
+    return wrong("must come from the entry that gives carbohydrate and fibre");
+  }
+  if (!isShortestPlain(parts.byDifference) || !isShortestPlain(parts.fibre)) {
+    return wrong("takes shortest decimals");
+  }
+  if (per100g.fibre !== parts.fibre) return wrong(`takes the fibre of the food, ${per100g.fibre}`);
+  const available = subtract(decimal(parts.byDifference), decimal(parts.fibre));
+  if (compare(available, decimal("0")) < 0)
+    return wrong("is below zero: fibre above the difference");
+  const expected = shortestDecimal(toDecimalString(available));
+  if (per100g.carbohydrate !== expected) {
+    return wrong(`is ${parts.byDifference} less ${parts.fibre}, ${expected}`);
+  }
+  return [];
 }
 
 function checkContradictions({ per100g }: Food): Issue[] {
