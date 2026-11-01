@@ -18,8 +18,17 @@ const maintained = readFoods(join(import.meta.dirname, "../data/foods"));
 
 test("every food of the BLS 4.0 ships, each under its own code", () => {
   // BLS 4.0 documentation 2.1: 7.140 foods; 32 with contradicting fat values are left out (SPEC 8).
-  expect(foods).toHaveLength(7108);
+  expect(foods.filter(([code]) => !code.includes("_"))).toHaveLength(7108);
   for (const [name, food] of foods) expect(food.code).toBe(name);
+});
+
+test("a food of our own comes from other sources than the BLS", () => {
+  // An id with an underscore means the BLS has no such food (SPEC 3.2).
+  const own = maintained.filter((food) => food.code.includes("_"));
+  expect(own.length).toBeGreaterThan(0);
+  for (const food of own) {
+    expect(food.sources.map(({ source }) => source)).not.toContain("bls-4.0");
+  }
 });
 
 test("the names of each language are the maintained names of every food, nothing else", () => {

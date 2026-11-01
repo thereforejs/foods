@@ -1,0 +1,44 @@
+{
+  "code": "R_000001",
+  "name": {
+    "de": "Muskatnuss gemahlen",
+    "en": "Nutmeg, ground"
+  },
+  "per100g": {
+    "fat": "36.5",
+    "saturates": "26.2",
+    "monounsaturates": "3",
+    "polyunsaturates": "0.4",
+    "carbohydrate": "28.6",
+    "sugars": "1.1",
+    "starch": null,
+    "polyols": null,
+    "fibre": "12",
+    "protein": "5.3",
+    "sodium": "0.014",
+    "alcohol": "0",
+    "organicAcids": null
+  },
+  "marks": {},
+  "sources": [
+    {
+      "source": "livsmedelsverket-2026",
+      "id": "6666",
+      "nutrients": [
+        "fat",
+        "saturates",
+        "monounsaturates",
+        "polyunsaturates",
+        "carbohydrate",
+        "sugars",
+        "starch",
+        "polyols",
+        "fibre",
+        "protein",
+        "sodium",
+        "alcohol",
+        "organicAcids"
+      ]
+    }
+  ]
+}

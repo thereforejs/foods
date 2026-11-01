@@ -1,0 +1,50 @@
+{
+  "code": "R_000021",
+  "name": {
+    "de": "Fenchelsamen getrocknet",
+    "en": "Fennel seed, dried"
+  },
+  "per100g": {
+    "fat": "14.87",
+    "saturates": "0.48",
+    "monounsaturates": "9.91",
+    "polyunsaturates": "1.69",
+    "carbohydrate": "12.49",
+    "sugars": null,
+    "starch": null,
+    "polyols": null,
+    "fibre": "39.8",
+    "protein": "15.8",
+    "sodium": "0.088",
+    "alcohol": null,
+    "organicAcids": null
+  },
+  "marks": {},
+  "sources": [
+    {
+      "source": "usda-sr-legacy",
+      "id": "171323",
+      "nutrients": [
+        "fat",
+        "saturates",
+        "monounsaturates",
+        "polyunsaturates",
+        "carbohydrate",
+        "sugars",
+        "starch",
+        "polyols",
+        "fibre",
+        "protein",
+        "sodium",
+        "alcohol",
+        "organicAcids"
+      ],
+      "derived": {
+        "carbohydrate": {
+          "byDifference": "52.29",
+          "fibre": "39.8"
+        }
+      }
+    }
+  ]
+}

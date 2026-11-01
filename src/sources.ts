@@ -42,4 +42,12 @@ export const sources = {
     citation:
       "U.S. Department of Agriculture, Agricultural Research Service (2024): FoodData Central, Survey Foods (FNDDS). fdc.nal.usda.gov.",
   },
+  "livsmedelsverket-2026": {
+    name: "Livsmedelsdatabasen (Swedish Food Composition Database), version 2026-07",
+    publisher: "Livsmedelsverket (Swedish Food Agency)",
+    license: "CC-BY-4.0",
+    url: "https://dataportal.livsmedelsverket.se/livsmedel/swagger/index.html",
+    citation:
+      "Livsmedelsverket (2026): Livsmedelsdatabasen, version 2026-07. Retrieved 2026-11-01 from dataportal.livsmedelsverket.se.",
+  },
 } satisfies Record<string, Source>;

@@ -1,0 +1,44 @@
+{
+  "code": "C_000001",
+  "name": {
+    "de": "Basmatireis roh",
+    "en": "Basmati rice, raw"
+  },
+  "per100g": {
+    "fat": "1",
+    "saturates": "0.2",
+    "monounsaturates": "0.3",
+    "polyunsaturates": "0.3",
+    "carbohydrate": "76.7",
+    "sugars": "0.4",
+    "starch": null,
+    "polyols": null,
+    "fibre": "0.5",
+    "protein": "9.2",
+    "sodium": "0",
+    "alcohol": "0",
+    "organicAcids": null
+  },
+  "marks": {},
+  "sources": [
+    {
+      "source": "livsmedelsverket-2026",
+      "id": "2475",
+      "nutrients": [
+        "fat",
+        "saturates",
+        "monounsaturates",
+        "polyunsaturates",
+        "carbohydrate",
+        "sugars",
+        "starch",
+        "polyols",
+        "fibre",
+        "protein",
+        "sodium",
+        "alcohol",
+        "organicAcids"
+      ]
+    }
+  ]
+}

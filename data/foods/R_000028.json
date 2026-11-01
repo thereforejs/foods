@@ -1,0 +1,50 @@
+{
+  "code": "R_000028",
+  "name": {
+    "de": "Dill getrocknet",
+    "en": "Dill weed, dried"
+  },
+  "per100g": {
+    "fat": "4.36",
+    "saturates": "0.234",
+    "monounsaturates": null,
+    "polyunsaturates": null,
+    "carbohydrate": "42.22",
+    "sugars": null,
+    "starch": null,
+    "polyols": null,
+    "fibre": "13.6",
+    "protein": "19.96",
+    "sodium": "0.208",
+    "alcohol": null,
+    "organicAcids": null
+  },
+  "marks": {},
+  "sources": [
+    {
+      "source": "usda-sr-legacy",
+      "id": "171322",
+      "nutrients": [
+        "fat",
+        "saturates",
+        "monounsaturates",
+        "polyunsaturates",
+        "carbohydrate",
+        "sugars",
+        "starch",
+        "polyols",
+        "fibre",
+        "protein",
+        "sodium",
+        "alcohol",
+        "organicAcids"
+      ],
+      "derived": {
+        "carbohydrate": {
+          "byDifference": "55.82",
+          "fibre": "13.6"
+        }
+      }
+    }
+  ]
+}
