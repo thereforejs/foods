@@ -42,6 +42,14 @@ export const sources = {
     citation:
       "U.S. Department of Agriculture, Agricultural Research Service (2024): FoodData Central, Survey Foods (FNDDS). fdc.nal.usda.gov.",
   },
+  "usda-branded-2026-10": {
+    name: "USDA FoodData Central, Branded Foods, release 2026-10-29",
+    publisher: "U.S. Department of Agriculture, Agricultural Research Service",
+    license: "CC0-1.0",
+    url: "https://fdc.nal.usda.gov",
+    citation:
+      "U.S. Department of Agriculture, Agricultural Research Service (2026): FoodData Central, Branded Foods. fdc.nal.usda.gov.",
+  },
   "livsmedelsverket-2026": {
     name: "Livsmedelsdatabasen (Swedish Food Composition Database), version 2026-07",
     publisher: "Livsmedelsverket (Swedish Food Agency)",

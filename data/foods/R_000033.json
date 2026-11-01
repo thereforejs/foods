@@ -1,0 +1,50 @@
+{
+  "code": "R_000033",
+  "name": {
+    "de": "Currypaste rot",
+    "en": "Red curry paste"
+  },
+  "per100g": {
+    "fat": "2",
+    "saturates": "0",
+    "monounsaturates": null,
+    "polyunsaturates": null,
+    "carbohydrate": "6",
+    "sugars": "6",
+    "starch": null,
+    "polyols": null,
+    "fibre": "10",
+    "protein": "4",
+    "sodium": "4.9",
+    "alcohol": null,
+    "organicAcids": null
+  },
+  "marks": {},
+  "sources": [
+    {
+      "source": "usda-branded-2026-10",
+      "id": "2022414",
+      "nutrients": [
+        "fat",
+        "saturates",
+        "monounsaturates",
+        "polyunsaturates",
+        "carbohydrate",
+        "sugars",
+        "starch",
+        "polyols",
+        "fibre",
+        "protein",
+        "sodium",
+        "alcohol",
+        "organicAcids"
+      ],
+      "derived": {
+        "carbohydrate": {
+          "byDifference": "16",
+          "fibre": "10"
+        }
+      }
+    }
+  ]
+}
