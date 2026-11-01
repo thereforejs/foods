@@ -101,7 +101,7 @@ import foods by it. Both kinds are valid identifiers and export names (`scripts/
 ### 3.3 Foods beyond the BLS
 
 Decided 2026-11-01: basic cooking foods the BLS 4.0 does not hold (dried spices and herbs, fish
-sauce, baking soda, agave syrup) are added from other registered open sources, under our own ids
+sauce, baking soda, agave syrup, sriracha, fenugreek) are added from other registered open sources, under our own ids
 (section 3.2), never with a BLS code and never with a `bls-4.0` entry. A source wins when it gives the
 declaration's nutrients directly: Livsmedelsverket (Swedish Food Agency, CC BY 4.0) before USDA.
 
@@ -119,11 +119,20 @@ than the food's, an entry that does not give both, and a difference below its fi
 rule against a source that gives available carbohydrate directly: USDA 49.29 less 20.8 is 28.49,
 Livsmedelsverket gives 28.6.
 
-Left out, with the reason: agar (USDA gives 7.7 fibre in 80.88, which would make a fibre almost
+**Branded foods** (manufacturers' labels in FoodData Central) only where a basic food has no
+analysed source at all, only for a serving of at least 40 g given per gram, and never for spices. A
+label rounds per serving: below that size its zeros and steps stop being values (star anise "0 g" of
+everything, 1 g carbohydrate in a 1.4 g serving becoming 71.4 g). Taken so far: brown rice syrup (Now Foods,
+42 g) and red curry paste (Kanokwan, 50 g).
+
+Left out, with the reason: coconut drink (USDA saturates 2.083 above fat 2.08), agar (USDA gives 7.7 fibre in 80.88, which would make a fibre almost
 wholly available carbohydrate), curry powder (USDA sugars 2.76 above its 2.63 difference). Not added
 because the BLS has them: Tahin (Q901000), onion powder (G480500), brown rice (C351000), balsamic
-vinegar (R125000). Still without any open source: liquid seasoning (the Maggi kind), star anise,
-vanilla pod, juniper, harissa, curry paste, beet syrup, rice syrup, coconut sugar, erythritol.
+vinegar (R125000). Still without a clean open source: liquid seasoning (the Maggi kind; labels per 5 ml),
+star anise, vanilla pod, juniper and curry powder (labels per 0.5 to 2 g), harissa (labels per 15 g at
+most), coconut sugar (3 to 5 g), beet syrup (the Grafschafter label gives more sugars than available
+carbohydrate) and erythritol (it needs its own key, which this package does not ship, or nutrition
+counts it as a polyol with energy).
 
 ---
 

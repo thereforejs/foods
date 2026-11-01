@@ -135,6 +135,8 @@ same entry, and the entry keeps both numbers under `derived`, so anyone can chec
 
 A food whose source contradicts itself does not ship, as with the BLS (curry powder: more sugars
 than the difference leaves).
+Values from manufacturers' labels (FoodData Central, Branded Foods) only where nothing analysed exists,
+for a serving of 40 g or more, never for spices: smaller servings round their values away.
 
 ## Left out
 
@@ -168,7 +170,7 @@ Step by step in [CONTRIBUTING.md](./CONTRIBUTING.md).
   - McCance and Widdowson's Composition of Foods Integrated Dataset 2021, Public Health England.
     Contains public sector information licensed under the
     [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
-  - USDA FoodData Central (SR Legacy, Survey Foods/FNDDS), U.S. Department of Agriculture,
+  - USDA FoodData Central (SR Legacy, Survey Foods/FNDDS, Branded Foods), U.S. Department of Agriculture,
     Agricultural Research Service, [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
   - Livsmedelsverket (2026): Livsmedelsdatabasen, version 2026-07, Swedish Food Agency,
     [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
